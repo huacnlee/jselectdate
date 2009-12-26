@@ -1,0 +1,34 @@
+=jQuery.jSelectDate
+
+jSelectDate is a simple drop-down list date select of jQuery plugin . It is different from previous choice of the date of control, it is embodied in the way the drop-down list, this may facilitate a better user experience.
+
+==Example
+
+html:
+
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+  <html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>jQuery.jSelectDate example</title>
+      <script type="text/javascript" src="scripts/jquery.js"></script>
+      <script type="text/javascript" src="scripts/jquery.jSelectDate.js"></script>
+      <script type="text/javascript">        
+        $("body").ready(function(){          
+          //apply jselectdate
+          $("input.date").jSelectDate({
+            css:"date",
+            yearBeign: 1995,
+            disabled : false
+          });
+        })
+        
+        $(this).jSelectDate();
+      </script>        
+    </head>
+    <body>
+      <input type="text" id="txtName" class="date" value="2005-3-22" /> <button onclick="alert($(’#txtName’).val());">当前值</button>
+      <br /><br />
+      <input type="text" id="txtDate2" class="date" value="1995-5-2" />
+    </body>
+  </html>
