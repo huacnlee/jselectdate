@@ -3,10 +3,11 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>jQuery插件之下拉列表日期控件 - jQuery.jSelectDate</title>
+		<link rel="stylesheet" href="../style.css" type="text/css" />
 		<style type="text/css">
 			span.date select{ margin-bottom:2px;}
 		</style>
-		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="scripts/jquery.jSelectDate.js"></script>
 		<script type="text/javascript">
 			
@@ -27,8 +28,14 @@
 		</script>		
 	</head>
 	<body>
-		<input type="text" id="txtName" class="date" value="2007-2" /> <button onclick="alert($('#txtName').val());">当前值</button>
-		<br /><br />
-		<input type="text" id="txtDate2" class="date" value="1995-5-2" />
+	  <div id="container">
+	    <h1>jSelectDate</h1>  
+	    <div id="demo" class="box">
+	      <input type="text" id="txtName" class="date" value="2007-2" /> <button onclick="alert($('#txtName').val());">当前值</button>
+    		<br /><br />
+    		<input type="text" id="txtDate2" class="date" value="1995-5-2" />
+	    </div>
+	  </div>
+		
 	</body>
 </html>
