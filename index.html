@@ -1,80 +1,83 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>jSelectDate by huacnlee</title>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>jSelectDate</h1>
+        <p>jQuery date choice control with dropdown list</p>
 
-	<title>huacnlee/jselectdate @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #a2fa04;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #5d05fb; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #5d05fb; }
-    h3 { text-align: center; color: #5d05fb; }
-    a { color: #5d05fb; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>
+        <p class="view"><a href="https://github.com/huacnlee/jselectdate">View the Project on GitHub <small>huacnlee/jselectdate</small></a></p>
 
-<body>
-  <a href="http://github.com/huacnlee/jselectdate"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
+        <ul>
+          <li><a href="https://github.com/huacnlee/jselectdate/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/huacnlee/jselectdate/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/huacnlee/jselectdate">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>jSelectDate is a simple drop-down list date select of jQuery plugin . It is different from previous choice of the date of control, it is embodied in the way the drop-down list, this may facilitate a better user experience.</p>
 
-    <div class="download">
-      <a href="http://github.com/huacnlee/jselectdate/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/huacnlee/jselectdate/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+<h3>Example</h3>
+
+<p><img src="http://www.cnblogs.com/images/cnblogs_com/huacn/calendar_3.PNG" alt=""></p>
+
+<div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;title&gt;</span>jQuery.jSelectDate example<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"scripts/jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"scripts/jquery.jSelectDate.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>        
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>          
+      <span class="c1">//apply jselectdate</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">"input.date"</span><span class="p">).</span><span class="nx">jSelectDate</span><span class="p">({</span>
+        <span class="nx">css</span><span class="o">:</span><span class="s2">"date"</span><span class="p">,</span>
+        <span class="nx">yearBeign</span><span class="o">:</span> <span class="mi">1995</span><span class="p">,</span>
+        <span class="nx">disabled</span> <span class="o">:</span> <span class="kc">false</span>
+      <span class="p">});</span>
+    <span class="p">})</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">jSelectDate</span><span class="p">();</span>
+  <span class="nt">&lt;/script&gt;</span>        
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"txtName"</span> <span class="na">class=</span><span class="s">"date"</span> <span class="na">value=</span><span class="s">"2005-3-22"</span> <span class="nt">/&gt;</span> <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"alert($(’#txtName’).val());"</span><span class="nt">&gt;</span>当前值<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;br</span> <span class="nt">/&gt;&lt;br</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"txtDate2"</span> <span class="na">class=</span><span class="s">"date"</span> <span class="na">value=</span><span class="s">"1995-5-2"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/huacnlee">huacnlee</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-9745660-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
 
-    <h1><a href="http://github.com/huacnlee/jselectdate">jselectdate</a>
-      <span class="small">by <a href="http://github.com/huacnlee">huacnlee</a></span></h1>
-
-    <div class="description">
-      jQuery date choice control with dropdown list
-    </div>
-
-    <h2>Authors</h2>
-<p>huacnlee (huacnlee@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Jason Lee (huacnlee@gmail.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/huacnlee/jselectdate/zipball/master">zip</a> or
-      <a href="http://github.com/huacnlee/jselectdate/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/huacnlee/jselectdate</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/huacnlee/jselectdate">huacnlee/jselectdate</a>
-    </div>
-
-  </div>
-
-  
-</body>
+  </body>
 </html>
